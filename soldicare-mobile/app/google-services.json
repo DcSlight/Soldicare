@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "481616200986",
+    "project_id": "soldicare-3cd45",
+    "storage_bucket": "soldicare-3cd45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481616200986:android:383d4a53ab34f56dffd8a3",
+        "android_client_info": {
+          "package_name": "com.example.soldicare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbHE9EkAhLdz0vqWt5Hp5IpEsWl-lLYPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

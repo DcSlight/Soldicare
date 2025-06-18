@@ -1,0 +1,62 @@
+plugins {
+	id 'java'
+	// updated April 24th, 2025.
+	id 'org.springframework.boot' version '3.5.0'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '1.0'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// provide REST API over HTTP capabilities
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	// relational database integration project
+	// implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+		
+	// simulates database using Maps
+	// implementation 'org.springframework.data:spring-data-keyvalue'
+	
+	// MongoDB NoSQL database integration support
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	
+	// helper utilities for project development
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.8'
+	
+	// integration with docker compose
+	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+	
+	// h2 relational database driver - for testing environment
+	// runtimeOnly 'com.h2database:h2'
+	
+  	// postgresql relational database driver - for development and production
+	// runtimeOnly 'org.postgresql:postgresql'
+	
+	// utilities for integration tests
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	
+	// add:
+	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+	testImplementation 'org.testcontainers:junit-jupiter'
+	testImplementation 'org.testcontainers:mongodb'
+	testImplementation 'org.testcontainers:activemq'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

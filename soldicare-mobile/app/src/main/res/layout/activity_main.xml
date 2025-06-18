@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Full-screen camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- NFC Status Text at the top -->
+    <TextView
+        android:id="@+id/nfcStatusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_margin="16dp"
+        android:background="#80000000"
+        android:padding="12dp"
+        android:text="Ready to scan NFC tag"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/uploadSpinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/flashOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="invisible"/>
+
+    <!-- Center-placed ImageButton with transparent background -->
+    <ImageButton
+        android:id="@+id/captureButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/button"
+        android:background="@null"
+        android:contentDescription="@string/take_photo" />
+
+</FrameLayout>

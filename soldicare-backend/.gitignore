@@ -1,0 +1,42 @@
+# === Gradle build files ===
+.gradle/
+build/
+out/
+bin/
+
+# Ignore all files under /gradle except the wrapper files
+gradle/**
+!gradle/wrapper/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Gradle wrapper scripts
+!gradlew
+!gradlew.bat
+
+# === Java class files ===
+*.class
+
+# === Logs and temp files ===
+*.log
+*.tmp
+*.bak
+*.swp
+
+# === IDEs ===
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
