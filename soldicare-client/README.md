@@ -35,6 +35,7 @@ Before running the project, make sure to create a `.env` file in the root of the
 ```env
 VITE_API_BACKEND_URL=http://localhost:8084/ambient-intelligence
 VITE_APP_NAME=2025b.Itay.Chabra
+import.meta.env.VITE_FIREBASE=<api-key>
 ```
 
 ### Start Development Server
