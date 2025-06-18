@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB7ZrDztFVO_pDhSbrAjZF2T3SLR42cufY",
+  apiKey: import.meta.env.VITE_FIREBASE,
   authDomain: "soldicare-3cd45.firebaseapp.com",
   projectId: "soldicare-3cd45",
   storageBucket: "soldicare-3cd45.firebasestorage.app",
